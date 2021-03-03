@@ -1,0 +1,10 @@
+version: '3'
+services:
+  go:
+    image: golang
+    volumes:
+      - ./go:/root
+      - /home/ubuntu/product/stellar/horizon/go:/go/src/github.com/stellar/go
+      - /home/ubuntu/go1.16/bin:/go/bin
+    working_dir: /go/src/github.com/stellar/go
+    command: /root/dk-horizon-install.sh github.com/stellar/go/services/horizon
