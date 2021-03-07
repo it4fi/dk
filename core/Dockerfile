@@ -2,7 +2,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 
 # Copyright (c) it4fi. All rights reserved. {{{1
-# Licensed under the MIT License.
+# Licensed under the MIT License: https://opensource.org/licenses/MIT
 
 # Use the default ubuntu image {{{1
 FROM ubuntu
