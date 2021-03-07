@@ -2,7 +2,5 @@
 # Copyright (c) it4fi. All rights reserved. {{{1
 # Licensed under the MIT License.
 
-go version # {{{1
-go mod download
-echo "- installing $1"
-go install $1
+echo "- installing $1" # {{{1
+echo "- installed $1"

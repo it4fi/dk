@@ -1,6 +1,9 @@
+# Copyright (c) it4fi. All rights reserved. {{{1
+# Licensed under the MIT License.
+
 version: '3'
 services:
-  go:
+  go: # {{{1
     image: golang
     volumes:
       - ./go:/root
@@ -8,9 +11,11 @@ services:
       - /home/ubuntu/go1.16/bin:/go/bin
     working_dir: /go/src/github.com/stellar/go
     command: /root/dk-horizon-install.sh github.com/stellar/go/services/horizon
-  core:
+  core: # {{{1
     build:
       context: ./core
     volumes:
-      - /home/ubuntu/product/stellar/stellar-core:/home/vscode/stellar-core
+      - ./core/core-install.sh:/core-install.sh
+        #- /home/ubuntu/product/stellar/stellar-core:/home/vscode/stellar-core
       - ./usr_local:/usr/local
+    command: /core-install.sh stellar-core
